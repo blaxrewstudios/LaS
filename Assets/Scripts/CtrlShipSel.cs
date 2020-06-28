@@ -22,6 +22,9 @@ public class CtrlShipSel : MonoBehaviour
         So3Btn = GameObject.Find("Ship of 3").GetComponent<Button>();
         So2Btn = GameObject.Find("Ship of 2").GetComponent<Button>();
         So1Btn = GameObject.Find("Ship of 1").GetComponent<Button>();
+
+        So1Btn.onClick.AddListener(() => BtnDeactivator(1));
+        So1Btn.onClick.AddListener(() => ShowShip());
     }
     private void Start()
     {
@@ -50,7 +53,16 @@ public class CtrlShipSel : MonoBehaviour
 
     private void Update()
     {
+    }
 
+    public void BtnDeactivator(int btn)
+    {
+        switch (btn)
+        {
+            case 1:
+                So1Btn.interactable = false;
+                break;
+        }
     }
 
     public void ShowShip()
