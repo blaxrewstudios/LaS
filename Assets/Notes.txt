@@ -1,0 +1,1 @@
+Ctrl Ship Sel script doens't work correctly at point of positioning ship of 2 highlighting object

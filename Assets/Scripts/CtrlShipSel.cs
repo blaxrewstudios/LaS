@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public struct Ship
 {
@@ -21,6 +22,7 @@ public class CtrlShipSel : MonoBehaviour
     public List<Transform> anchors_vertical2_2;
     float distance = 49.0f;
     bool rotated = false;
+    public float rotation = 0;
     int ShipNow = -1;
     public Color col;
 
@@ -120,14 +122,14 @@ public class CtrlShipSel : MonoBehaviour
                     {
                         if (Vector3.Distance(Input.mousePosition, anchor.position) < distance)
                         {
-                            RCH.position = new Vector3(anchor.position.x + 49, anchor.position.y, anchor.position.z);
+                            RCH.position = new Vector3(anchor.position.x + distance, anchor.position.y, anchor.position.z);
                         }
                     }
                     foreach (Transform anchor in anchors_vertical2_2)
                     {
                         if (Vector3.Distance(Input.mousePosition, anchor.position) < distance)
                         {
-                            RCH.position = new Vector3(anchor.position.x - 49, anchor.position.y, anchor.position.z);
+                            RCH.position = new Vector3(anchor.position.x - distance, anchor.position.y, anchor.position.z);
                         }
                     }
                 }
