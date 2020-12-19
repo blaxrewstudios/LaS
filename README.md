@@ -1,4 +1,4 @@
-# Battleship
+# LaS (Lights And Shadows)
 
 - Not finished yet
 
