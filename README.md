@@ -1,5 +1,5 @@
 # LaS (Lights And Shadows)
 
-- Not finished yet
+- Test available
 
  Copyright 2020 BlaXrew Studios. All rights reserved.
